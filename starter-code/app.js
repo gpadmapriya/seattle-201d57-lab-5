@@ -56,10 +56,22 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
+  //Add the first 2 numbers and add the third number to the total of the first 2 numbers
+  var total = sum(a, b);
+  var newTotal = sum(total[0], c);
+
+  //Multiply the first 2 numbers and multiply the third number to the product of the first 2 numbers
+
+  var product = multiply(a, b);
+  var newProduct = multiply(product[0], c);
+  var thirdElement = a + ' and ' + b + ' and ' + c + ' sum to ' + newTotal[0] + '.';
+  var fourthElement = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + newProduct[0] + '.';
+
+  return [newTotal[0], newProduct[0], thirdElement, fourthElement];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
