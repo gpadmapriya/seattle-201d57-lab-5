@@ -124,10 +124,23 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
 
+  var product = 1;
+  var message = '';
+
+  /*call the multiply function and get only the product (element at 0th index). The message returned by the multiply function is not needed*/
+
+  for (var i = 0; i < multArr.length; i++){
+    product = multiply(product, multArr[i])[0];
+  }
+
+  /* This function handles only an array containing 3 elements as given in the iomportant detail section while the sumArray//() function can handle arrays with any number of elements*/
+
+  message = 'The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + product + '.';
+  return [product, message];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
